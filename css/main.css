@@ -2269,6 +2269,7 @@ h3 {
   -moz-column-gap: 18px;
   column-gap: 18px;
 }
+
 @media (max-width: 1200px) {
   .footer__form {
     margin-left: 0;
