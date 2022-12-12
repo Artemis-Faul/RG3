@@ -502,7 +502,7 @@ h3 {
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 768px) {
   .btn_header {
     display: none;
   }
@@ -721,6 +721,10 @@ h3 {
   background: var(--pale-blue);
 }
 
+.what-seo__mob {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .what-seo__tablets {
     display: none;
@@ -847,6 +851,7 @@ h3 {
     right: -200px;
     top: -110px;
     max-width: 100%;
+    display: none;
   }
 }
 
@@ -854,6 +859,7 @@ h3 {
   .examples__illustration {
     right: -180px;
     top: -100px;
+    display: none;
   }
 }
 
