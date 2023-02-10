@@ -25,6 +25,13 @@
 }
 @font-face {
   font-family: "Raleway";
+  font-weight: 400;
+  src: url("../fonts/Raleway-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
   font-weight: 500;
   src: url("../fonts/Raleway-Medium.woff") format("woff");
   font-display: swap;
@@ -162,7 +169,7 @@ h3 {
 
 @media (max-width: 1536px) {
   .section {
-    margin-bottom: 165px;
+    margin-bottom: 120px;
   }
   .container {
     padding: 0 67.5px;
@@ -195,12 +202,11 @@ h3 {
     padding: 0px 20px;
   }
 
-  .mb-40 {
-    margin-bottom: 30px;
-  }
-
   .mb-60 {
     margin-bottom: 30px;
+  }
+  .section {
+    margin-bottom: 60px;
   }
 }
 
@@ -565,6 +571,9 @@ h3 {
     background-position-y: -17px;
     min-height: 360px;
   }
+  .banner__inner {
+    text-align: center;
+  }
 
   .banner__title {
     font-size: 24px;
@@ -575,6 +584,7 @@ h3 {
   .banner__subtitle {
     font-size: 1rem;
     max-width: 180px;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 
@@ -621,6 +631,9 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  .why-seo {
+    padding-top: 80px;
+  }
   .why-seo__cards {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -696,7 +709,7 @@ h3 {
 }
 
 .what-seo__p {
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 400;
   padding: 16px 24px;
   border-radius: 60px;
@@ -723,6 +736,12 @@ h3 {
   display: none;
 }
 
+@media (max-width: 1367px) {
+  .what-seo__p {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
   .what-seo__tablets {
     display: none;
@@ -733,9 +752,11 @@ h3 {
 
   .what-seo__inner {
     gap: 8px 4px;
+    justify-content: center;
   }
+
   .what-seo__p {
-    font-size: 9px;
+    font-size: 12px;
     padding: 14px;
   }
 }
@@ -780,6 +801,7 @@ h3 {
   padding: 40px 0;
   color: var(--grey);
   font-size: 1.375rem;
+  font-weight: 400;
   max-width: 530px;
 }
 
@@ -810,24 +832,29 @@ h3 {
 
 .solution__span {
   display: block;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 .solution__p {
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 @media (max-width: 1536px) {
+  .examples {
+    padding: 80px 0 120px 0;
+  }
+
   .examples__illustration {
     right: 130px;
     top: 110px;
     max-width: 500px;
   }
   .solution__wrap {
-    height: 320px;
-    padding: 76px 100px 0 100px;
+    height: 250px;
+    padding: 40px 100px 40px 100px;
   }
 }
 
@@ -919,7 +946,7 @@ h3 {
 
 @media (max-width: 768px) {
   .examples__span {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .examples__inner {
@@ -936,8 +963,12 @@ h3 {
   .examples__problem {
     padding: 25px 0;
     color: var(--grey);
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
+  }
+
+  .examples-swiper {
+    position: unset;
   }
 
   .swiper-wrapper {
@@ -945,7 +976,7 @@ h3 {
   }
 
   .solution__wrap {
-    height: 300px;
+    height: 320px;
     padding: 25px 24px 0 24px;
     font-size: 14px;
   }
@@ -979,7 +1010,7 @@ h3 {
   opacity: 1;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1536px) {
   .swiper-container-horizontal
     > .swiper-pagination-bullets
     .swiper-pagination-bullet {
@@ -1262,7 +1293,8 @@ h3 {
 
 .step__text {
   line-height: 130%;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .step_one_1 {
@@ -1398,6 +1430,7 @@ h3 {
   .tab-content:first-child {
     background: #fff;
     height: auto;
+    margin-bottom: 0;
   }
 
   .tab__bottom {
@@ -1462,7 +1495,8 @@ h3 {
   height: 60.71px;
   background: #e7e7e7;
   border-radius: 74.3337px;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 @media (max-width: 1280px) {
@@ -1888,8 +1922,7 @@ h3 {
 
 .review__text {
   font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 140%;
+  font-size: 16px;
 }
 
 @media (max-width: 1024px) {
@@ -2162,7 +2195,7 @@ h3 {
 }
 
 .accordion .accordion-content p {
-  font-size: 1.5rem;
+  font-size: 16px;
   font-weight: 400;
   max-width: 77.5%;
 }
