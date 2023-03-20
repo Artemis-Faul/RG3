@@ -89,13 +89,19 @@ p {
   --red: #ed1c24;
   --grey: #9e9e9e;
   --second-grey: #ababab;
+  --grey-linear: linear-gradient(90deg, #e3e3e4 -0.08%, #f2f2f2 99.92%);
   --black: #131313;
   --white: #ffffff;
   --blue-linear: linear-gradient(180deg, #1f54cb 29.55%, #1f54cb 70.25%);
   --blue: #1f54cb;
+  --blue-linear-1: linear-gradient(90deg, #016bcf -2.37%, #0153cd 99.92%);
+  --blue-linear-2: linear-gradient(90deg, #016bcf 0%, #0154cd 100%);
+  --light-linear: linear-gradient(90deg, #3e91df -19.47%, #3369df 100%);
+  --cross-linear: linear-gradient(90deg, #015ace -0.11%, #3779df 99.89%);
   --light-grey: #efefef;
   --pale-grey: #e7e7e7;
   --light-blue: #f5f6fa;
+  --grey-light: #e9f2f7;
   --pale-blue: #809cdf;
   --second-blue: #577fd8;
 }
@@ -128,7 +134,7 @@ body {
 /* DEFAULT STYLE */
 h1 {
   font-weight: 700;
-  font-size: 46px;
+  font-size: 2.875rem;
 }
 
 h2 {
@@ -709,15 +715,15 @@ h3 {
 }
 
 .what-seo__p {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   padding: 16px 24px;
   border-radius: 60px;
   color: var(--white);
 }
 
 .what-seo__p.blue {
-  background: var(--blue);
+  background: var(--blue-linear-1);
 }
 
 .what-seo__p.gray {
@@ -736,9 +742,23 @@ h3 {
   display: none;
 }
 
-@media (max-width: 1367px) {
+@media (max-width: 1600px) {
+  .what-seo__inner {
+    gap: 20px 8px;
+  }
   .what-seo__p {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 1367px) {
+  .what-seo__inner {
+    gap: 14px 7px;
+  }
+  .what-seo__p {
+    font-size: 12px;
+    padding: 12px 15px;
   }
 }
 
@@ -752,12 +772,12 @@ h3 {
 
   .what-seo__inner {
     gap: 8px 4px;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .what-seo__p {
-    font-size: 12px;
-    padding: 14px;
+    font-size: 10px;
+    padding: 10px;
   }
 }
 
@@ -781,7 +801,7 @@ h3 {
 
 .examples__span {
   color: var(--white);
-  background: var(--blue-linear);
+  background: var(--blue-linear-2);
   padding: 12px 24px;
   font-size: 1.5rem;
   font-weight: 700;
@@ -804,6 +824,9 @@ h3 {
   font-weight: 400;
   max-width: 530px;
 }
+.examples__problem_last {
+  max-width: 700px;
+}
 
 .swiper-wrapper {
 }
@@ -823,23 +846,26 @@ h3 {
 
 .solution__wrap {
   color: var(--white);
-  background: var(--blue);
+  background: var(--light-linear);
   height: 400px;
-  padding: 95px 126px 0 126px;
+  padding: 73px 125px 0 125px;
   border-radius: 16px;
   font-size: 1.375rem;
 }
 
 .solution__span {
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 .solution__p {
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 600;
+  /* font-size: 16px; */
+}
+.solution__p:nth-child(2) {
+  margin-bottom: 46px;
 }
 
 @media (max-width: 1536px) {
@@ -852,15 +878,17 @@ h3 {
     top: 110px;
     max-width: 500px;
   }
-  .solution__wrap {
-    height: 250px;
+  /* .solution__wrap {
     padding: 40px 100px 40px 100px;
+  } */
+  .solution__p:nth-child(2) {
+    margin-bottom: 36px;
   }
 }
 
 @media (max-width: 1280px) {
   .solution__wrap {
-    height: 292px;
+    height: 550px;
     padding: 60px 60px 0 60px;
   }
   .examples__problem {
@@ -962,6 +990,7 @@ h3 {
 
   .examples__problem {
     padding: 25px 0;
+    height: 130px;
     color: var(--grey);
     font-size: 16px;
     text-align: center;
@@ -976,7 +1005,7 @@ h3 {
   }
 
   .solution__wrap {
-    height: 320px;
+    height: 400px;
     padding: 25px 24px 0 24px;
     font-size: 14px;
   }
@@ -1146,6 +1175,7 @@ h3 {
 }
 
 .tab__bottom p {
+  color: #000000;
   font-weight: 500;
   line-height: 130%;
 }
@@ -1161,7 +1191,7 @@ h3 {
   }
 
   .tab__top {
-    position: unset;
+    right: -30px;
     margin-bottom: 40px;
   }
 
@@ -1185,7 +1215,9 @@ h3 {
   position: absolute;
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--blue);
+  background: var(--blue-linear);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-feature-settings: "pnum" on, "lnum" on;
   top: 155px;
 }
@@ -1286,14 +1318,17 @@ h3 {
 .step__title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--blue);
+  background: var(--blue-linear);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
   line-height: 100%;
 }
 
 .step__text {
   line-height: 130%;
-  font-weight: 400;
+  font-weight: 500;
+  color: #000000;
   font-size: 16px;
 }
 
@@ -1463,7 +1498,7 @@ h3 {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: var(--blue);
+  background: var(--grey-light);
   border-radius: 8px;
   box-shadow: 0px 25px 30px 0px rgba(31, 84, 203, 0.1);
   margin-right: 32px;
@@ -1495,8 +1530,8 @@ h3 {
   height: 60.71px;
   background: #e7e7e7;
   border-radius: 74.3337px;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 @media (max-width: 1280px) {
@@ -1530,7 +1565,7 @@ h3 {
   }
 
   .info__number_2 {
-    top: 199px;
+    top: 110px;
   }
   .info__number_2_1 {
     left: 32px;
@@ -1595,8 +1630,8 @@ h3 {
 @media (max-width: 1600px) {
   .control-sistem__img {
     right: 27px;
-    top: -26px;
-    max-width: 450px;
+    top: -72px;
+    max-width: 500px;
   }
 }
 
@@ -1729,15 +1764,7 @@ h3 {
   text-align: center;
   color: #fff;
   padding: 8px 16px;
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(#003ecb),
-    to(#016ccf)
-  );
-  background: -o-linear-gradient(right, #003ecb 0%, #016ccf 100%);
-  background: linear-gradient(270deg, #003ecb 0%, #016ccf 100%);
+  background: linear-gradient(90deg, #016bcf -0.2%, #0141cb 101.49%);
   border-radius: 0px 0px 8px 8px;
 }
 
@@ -1904,7 +1931,7 @@ h3 {
 
 @media (max-width: 1600px) {
   .reviews-container {
-    max-width: 1100px;
+    max-width: 1150px;
   }
 }
 
@@ -2161,13 +2188,13 @@ h3 {
   width: 64px;
   height: 64px;
   justify-content: center;
-  background: var(--blue);
+  background: var(--cross-linear);
   border-radius: 50%;
   color: var(--white);
   font-size: 80px;
   font-weight: 300;
   transition: 0.3s;
-  line-height: 85%;
+  line-height: 80%;
 }
 
 .accordion button[aria-expanded="true"] {
@@ -2195,7 +2222,7 @@ h3 {
 }
 
 .accordion .accordion-content p {
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 400;
   max-width: 77.5%;
 }
