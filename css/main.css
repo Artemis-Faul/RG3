@@ -886,6 +886,12 @@ h3 {
   }
 }
 
+@media (max-width: 1536px) and (min-width: 1441px) {
+  .solution__wrap {
+    padding: 40px 100px 0px 100px;
+  }
+}
+
 @media (max-width: 1280px) {
   .solution__wrap {
     height: 550px;
